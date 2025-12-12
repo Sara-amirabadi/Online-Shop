@@ -1,7 +1,29 @@
-@font-face {
-    font-family: "mainFont";
-    src: url(Vazirmatn-Medium.ttf);
+:root{
+  --bg:#fff;
+  --muted:#f7f6f5;
+  --accent:#f2c9be;
+  --accent-dark:#e7a892;
+  --green:#2f9c6e;
+  --text:#111;
+  --sub:#7b7b7b;
+  --card-border:#e9d9d4;
+  --shadow: rgba(0,0,0,0.08);
+  --radius:12px;
+  html, body {
+  font-family: "Vazirmatn", "Vazir", sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("./fonts/Vazirmatn-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 body {
     font-family: "mainFont";
@@ -443,79 +465,99 @@ body {
     border-radius: 15px;
 }
 
-.main-footer {
-    width: 100%;
-    min-height: 331px;
-    background-color: #fef7ec;
-    padding: 20px 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    color: #444;
+.site-footer{
+    font-family: "Vazirmatn";
+    margin-top:40px;
+    background:#fff;
+    border-top:6px solid var(--accent);
+    padding:22px 18px 36px 18px
+}
+.footer-inner{
+    max-width:1100px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:18px;
+    padding-bottom:18px;
+    border-bottom:1px solid var(--card-border)
+}
+.footer-col h4{
+    margin:0 0 8px 0
+}
+.footer-col ul{
+    list-style:none;
+    padding:0;
+    margin:0
+}
+.footer-col ul li{
+    margin-bottom:8px
+}
+.footer-col a{
+    color:var(--text);
+    text-decoration:none
+}
+.footer-col.contact p{
+    margin:6px 0;
+    font-size:14px;
+    
+}
+.socials{
+    display:flex;
+    gap:8px;
+    margin-top:8px
+}
+.socials a{
+    display:inline-block;
+    padding:6px 10px;
+    border-radius:6px;
+    background:var(--muted);
+    text-decoration:none;
+    color:var(--text)
+}
+.footer-bottom{
+    max-width:1100px;
+    margin:12px auto 0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-top:12px;
 }
 
-.main-footer::before {
-    content: none;
+.footer-bottom .follow{
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-.footer-container {
-    width: 90%;
-    max-width: 1300px;
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    padding-top: 20px;
-    z-index: 2;
+.social-icons{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    padding: 0 10px;
+.social-icons img{
+    width:24px;     /* اندازه آیکون‌ها */
+    height:24px;
+    object-fit:contain;
+    transition:0.3s;
+    cursor:pointer;
 }
 
-.footer-column h2 {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #4A2320;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-    position: relative;
-    width: fit-content;
+.social-icons img:hover{
+    opacity:0.7;    /* افکت هاور */
 }
 
-.footer-column h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #f29c87;
+.footer-bottom .copyright{
+    color:var(--sub);
 }
 
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.site-footer,
+.site-footer * {
+  font-family: "Vazirmatn", sans-serif;
 }
 
-.footer-column li {
-    font-size: 16px;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-}
 
-.footer-column li img {
-    width: 20px;
-    height: 20px;
-    margin-left: 12px;
-    object-fit: contain;
-}
 
 .product-group {
     display: flex;
@@ -524,4 +566,14 @@ body {
 
 .product-group ul li {
     margin-bottom: 8px;
+}
+
+@media (max-width:1000px){
+
+  .footer-inner{grid-template-columns: repeat(2,1fr)}
+}
+@media (max-width:680px){
+
+  .footer-inner{grid-template-columns:1fr}
+
 }

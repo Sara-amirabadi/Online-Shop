@@ -22,4 +22,80 @@ function prevImage() {
 document.getElementById("nextBtn").onclick = nextImage;
 document.getElementById("prevBtn").onclick = prevImage;
 
-setInterval(nextImage, 5000);
+
+const cartIcon = document.getElementById('cartIcon');
+const cartSidebar = document.getElementById('cartSidebar');
+cartIcon.addEventListener('click', () => {
+    cartSidebar.classList.add('active');
+    cartIcon.style.display = 'none';
+});
+cartSidebar.addEventListener('click', () => {
+    cartSidebar.classList.remove('active');
+    cartIcon.style.display = 'flex';
+});
+//cart
+document.addEventListener("DOMContentLoaded", () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const tbody = document.getElementById("cart-body");
+
+    tbody.innerHTML = "";
+
+    cart.slice(0, 10).forEach((item, index) => {
+        const row = `
+      <tr>
+        <td>${index + 1}</td>
+        <td>${item.name}</td>
+        <td>${item.qty}</td>
+        <td>${item.price}</td>
+        <td>${item.qty * item.price}</td>
+      </tr>
+    `;
+        tbody.insertAdjacentHTML("beforeend", row);
+    });
+});
+//shipping
+alert("JS LOADED");
+
+const form = document.getElementById("myForm");
+const mobileInput = document.getElementById("mobile");
+
+function showError(input, message) {
+    const error = input.parentElement.querySelector(".error-text");
+    error.innerText = message;
+    error.style.display = "block";
+}
+
+function hideError(input) {
+    const error = input.parentElement.querySelector(".error-text");
+    error.style.display = "none";
+}
+
+function isValidMobile(value) {
+    return /^09\d{9}$/.test(value);
+}
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    form.querySelectorAll("[required]").forEach(input => {
+        if (!input.value.trim()) {
+            showError(input, "این فیلد الزامی است");
+            isValid = false;
+        } else {
+            hideError(input);
+        }
+    });
+
+    if (mobileInput.value.trim() && !isValidMobile(mobileInput.value)) {
+        showError(mobileInput, "شماره موبایل معتبر وارد کنید");
+        isValid = false;
+    }
+
+    if (isValid) {
+        console.log("redirecting...");
+        alert("OK");
+        window.location.href = "../html/login.html";
+    }
+});

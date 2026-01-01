@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+
+}
+
+body {
+    margin: 0;
+    min-height: 80vh;
+    background-image: url("../image/bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.login-box {
+
+    width: 30%;
+
+    background: #acdae4;
+    border-radius: 8px;
+    padding: 25px 30px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.logo p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #999;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.options a {
+    color: #284f60;
+    text-decoration: none;
+}
+
+.remember-me {
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+    user-select: none;
+    color: #284f60;
+}
+
+.remember-me input {
+    width: 12px;
+    height: 12px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn.primary {
+    background: #468a9a;
+    border: none;
+    margin-top: 16px;
+}
+
+.btn.secondary {
+    background: #fff;
+    border: 1px solid #777;
+}

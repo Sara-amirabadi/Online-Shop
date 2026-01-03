@@ -18,9 +18,9 @@
             <div class="logo">
                 <img src="../image/logo (1).png" alt="Easy Style">
             </div>
-            <form>
-                <input type="text" placeholder="شماره موبایل">
-                <input type="password" placeholder="رمز عبور">
+            <form action="../php/login.php" method="post">
+                <input type="text" name="mobile" placeholder="شماره موبایل" required>
+                <input type="password" name="password" placeholder="رمز عبور" required>
 
                 <div class="options">
                     <label class="remember-me">
@@ -30,8 +30,8 @@
 
                     <a href="../html/forgot.html">فراموشی رمز عبور</a>
                 </div>
+                <button class="btn primary" name="login">ورود</button>
             </form>
-            <form action="../html/HAD.html"><button class="btn primary">ورود</button></form>
 
             <form action="../html/register.html"><button class="btn secondary">ثبت نام</button></form>
 

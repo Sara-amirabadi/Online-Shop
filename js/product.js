@@ -141,3 +141,76 @@ hb && hb.addEventListener('click', () => {
     return String(str).replace(/[&<>"']/g, function (m) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m]); });
   }
 })();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const colorInputs = document.querySelectorAll(".swatch");
+  const sizeInputs = document.querySelectorAll(".size-btn");
+  const qtyValue = document.getElementById("qty-value");
+  const priceValue = document.getElementById("unit-price");
+
+  const colorHidden = document.getElementById("selected-color");
+  const sizeHidden = document.getElementById("selected-size");
+  const qtyHidden = document.getElementById("selected-qty");
+  const priceHidden = document.getElementById("selected-price");
+
+  colorInputs.forEach(el => {
+    el.addEventListener("click", () => {
+      colorInputs.forEach(s => s.classList.remove("selected"));
+      el.classList.add("selected");
+      colorHidden.value = el.dataset.color;
+    });
+  });
+
+  sizeInputs.forEach(el => {
+    el.addEventListener("click", () => {
+      sizeInputs.forEach(s => s.classList.remove("selected"));
+      el.classList.add("selected");
+      sizeHidden.value = el.dataset.size; 
+    });
+  });
+
+  document.getElementById("plus").addEventListener("click", () => {
+    let v = parseInt(qtyValue.innerText);
+    qtyValue.innerText = v + 1;
+    qtyHidden.value = v + 1;
+  });
+
+  document.getElementById("minus").addEventListener("click", () => {
+    let v = parseInt(qtyValue.innerText);
+    if (v > 1) {
+      qtyValue.innerText = v - 1;
+      qtyHidden.value = v - 1; 
+    }
+  });
+
+  priceHidden.value = priceValue.dataset.price;
+
+});
+document.querySelectorAll('.swatch').forEach(el => {
+  el.addEventListener('click', () => {
+    document.getElementById('selected-color').value = el.dataset.color;
+  });
+});
+
+document.querySelectorAll('.size-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('selected-size').value = btn.dataset.size;
+  });
+});
+
+let qty = 1;
+document.getElementById('plus').onclick = () => {
+  qty++;
+  document.getElementById('qty-value').innerText = qty;
+  document.getElementById('selected-qty').value = qty;
+};
+
+document.getElementById('minus').onclick = () => {
+  if (qty > 1) {
+    qty--;
+    document.getElementById('qty-value').innerText = qty;
+    document.getElementById('selected-qty').value = qty;
+  }
+};

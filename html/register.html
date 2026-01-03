@@ -18,10 +18,10 @@
             <div class="logo">
                 <img src="../image/logo (1).png" alt="Easy Style">
             </div>
-            <form action="login.php" method="get">
-                <input type="text" placeholder="شماره موبایل" name="phone">
-                <input type="password" placeholder="رمز عبور" name="pass">
-                <input type="password" placeholder="تکراررمز عبور" name="pass">
+            <form action="../php/register.php" method="post">
+                <input type="text" placeholder="شماره موبایل" name="mobile" required>
+                <input type="password" placeholder="رمز عبور" name="password" required>
+                <input type="password" placeholder="تکراررمز عبور" name="password" required>
                 <div class="options">
 
                     <label class="remember-me">
@@ -29,8 +29,8 @@
                         مرا به خاطر بسپار
                     </label>
                 </div>
+                <button class="btn primary" name="register">ثبت نام</button>
             </form>
-            <form action="../html/HAD.html"><button class="btn primary">ثبت نام</button></form>
 
 
             <div class=" options">

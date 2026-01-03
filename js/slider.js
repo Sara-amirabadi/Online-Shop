@@ -33,26 +33,7 @@ cartSidebar.addEventListener('click', () => {
     cartSidebar.classList.remove('active');
     cartIcon.style.display = 'flex';
 });
-//cart
-document.addEventListener("DOMContentLoaded", () => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const tbody = document.getElementById("cart-body");
 
-    tbody.innerHTML = "";
-
-    cart.slice(0, 10).forEach((item, index) => {
-        const row = `
-      <tr>
-        <td>${index + 1}</td>
-        <td>${item.name}</td>
-        <td>${item.qty}</td>
-        <td>${item.price}</td>
-        <td>${item.qty * item.price}</td>
-      </tr>
-    `;
-        tbody.insertAdjacentHTML("beforeend", row);
-    });
-});
 //shipping
 alert("JS LOADED");
 

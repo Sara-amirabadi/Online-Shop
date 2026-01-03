@@ -83,61 +83,69 @@
 
       </div>
     </section>
+    <form action="../php/add_to_cart.php" method="post">
 
-    <aside class="info" aria-label="اطلاعات محصول">
-      <br><br><br>
-      <h1 class="title">شومیز آستین پاگن ترانه</h1>
+      <aside class="info" aria-label="اطلاعات محصول">
+        <br><br><br>
+        <h1 class="title">شومیز آستین پاگن ترانه<input type="hidden" value=" شومیز آستین پاگن ترانه" name="name"></h1>
 
-      <div class="rating" aria-hidden="true">
-        <div class="stars">★★★★★</div>
-        <div class="count">۴۰۰ (دیدگاه)</div>
-      </div>
+        <div class="rating" aria-hidden="true">
+          <div class="stars">★★★★★</div>
+          <div class="count">۴۰۰ (دیدگاه)</div>
+        </div>
 
-      <a class="btn-size-guide" href="#" aria-label="راهنمای انتخاب سایز">راهنمای انتخاب سایز</a>
+        <a class="btn-size-guide" href="#" aria-label="راهنمای انتخاب سایز">راهنمای انتخاب سایز</a>
 
-      <div class="colors">
-        <div class="label">رنگ</div>
-        <div class="swatches">
-          <div class="swatch" data-color="#d6c7b0" style="background:#d6c7b0" title="کرم" role="button" tabindex="0">
+        <div class="colors">
+          <div class="label">رنگ</div>
+          <input type="hidden" name="color" id="selected-color" required>
+
+          <div class="swatches">
+            <div class="swatch" data-color="#d6c7b0" style="background:#d6c7b0" title="کرم" role="button" tabindex="0">
+            </div>
+            <div class="swatch" data-color="#a87d61" style="background:#a87d61" title="قهوه‌ای" role="button"
+              tabindex="0"></div>
+            <div class="swatch" data-color="#a0b3f2" style="background:#a0b3f2" title="آبی روشن" role="button"
+              tabindex="0"></div>
+            <div class="swatch" data-color="#2746a9" style="background:#2746a9" title="آبی تیره" role="button"
+              tabindex="0"></div>
+            <div class="swatch" data-color="#6b2a46" style="background:#6b2a46" title="بنفش" role="button" tabindex="0">
+            </div>
           </div>
-          <div class="swatch" data-color="#a87d61" style="background:#a87d61" title="قهوه‌ای" role="button"
-            tabindex="0"></div>
-          <div class="swatch" data-color="#a0b3f2" style="background:#a0b3f2" title="آبی روشن" role="button"
-            tabindex="0"></div>
-          <div class="swatch" data-color="#2746a9" style="background:#2746a9" title="آبی تیره" role="button"
-            tabindex="0"></div>
-          <div class="swatch" data-color="#6b2a46" style="background:#6b2a46" title="بنفش" role="button" tabindex="0">
+        </div>
+
+        <div class="sizes">
+          <div class="label">سایز</div>
+          <div class="size-buttons">
+            <input type="hidden" name="size" id="selected-size" required>
+
+            <button class="size-btn" data-size="XL" type="button">XL</button>
+            <button class="size-btn" data-size="L" type="button">L</button>
+            <button class="size-btn" data-size="S" type="button">S</button>
           </div>
         </div>
-      </div>
 
-      <div class="sizes">
-        <div class="label">سایز</div>
-        <div class="size-buttons">
-          <button class="size-btn" data-size="XL" type="button">XL</button>
-          <button class="size-btn" data-size="L" type="button">L</button>
-          <button class="size-btn" data-size="S" type="button">S</button>
+        <div class="price-row">
+          <div class="price">
+            <input type="hidden" name="price" id="selected-price" required>
+            <span id="unit-price" data-price="6890000">
+              ۶,۸۹۰,۰۰۰ ریال</span>
+          </div>
+
+          <div class="qty" aria-label="تعداد">
+            <input type="hidden" name="qty" id="selected-qty" value="1">
+            <button id="minus" type="button" aria-label="کم کردن">−</button>
+            <div class="num" id="qty-value" aria-live="polite">1</div>
+            <button id="plus" type="button" aria-label="افزودن">+</button>
+          </div>
         </div>
-      </div>
 
-      <div class="price-row">
-        <div class="price">
-          <span id="unit-price" data-price="6890000">۶,۸۹۰,۰۰۰</span> ریال
+        <div class="actions">
+          <button class="wishlist" type="button" aria-pressed="false" title="علاقه‌مندی">♡</button>
+          <button class="addtocart" type="submit">افزودن به سبد خرید</button>
         </div>
-
-        <div class="qty" aria-label="تعداد">
-          <button id="minus" type="button" aria-label="کم کردن">−</button>
-          <div class="num" id="qty-value" aria-live="polite">1</div>
-          <button id="plus" type="button" aria-label="افزودن">+</button>
-        </div>
-      </div>
-
-      <div class="actions">
-        <button class="wishlist" type="button" aria-pressed="false" title="علاقه‌مندی">♡</button>
-        <form action="../html/Cart.html"><button class="addtocart">افزودن به سبد خرید</button></form>
-      </div>
-
-      <div class="note">ارسال سریع · امکان بازگشت کالا · تضمین کیفیت</div>
+    </form>
+    <div class="note">ارسال سریع · امکان بازگشت کالا · تضمین کیفیت</div>
 
     </aside>
   </main>

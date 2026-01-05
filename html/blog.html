@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>چگونه مانند کیت میدلتون لباس بپوشیم؟</title>
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="overlay">
+            <h1>چگونه مانند کیت میدلتون لباس بپوشیم؟</h1>
+            <p>راهنمای استایل شیک و سلطنتی</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <article class="content scroll-item">
+            <h2>استایل کیت میدلتون</h2>
+            <p>
+                کیت میدلتون همسر شاهزاده ویلیام تقریباً بی عیب و نقص قلمداد می شود ، میلیون ها زن در سراسر جهان از او
+                تقلید می کنند. به نظر می رسد که خود کیت میدلتون همیشه برای توجه نزدیک به شخص خود آماده است.
+                او در هر موقعیتی ظاهری مرتب، ساده و بسیار شیک دارد.
+            </p>
+            <p>
+                انتخاب لباس‌های کلاسیک، رنگ‌های خنثی و توجه به جزئیات از ویژگی‌های اصلی استایل اوست.
+                کیت میدلتون بارها و بارها ثابت کرده که می‌تواند با پیراهن‌ها و لباس‌های خال‌خالی ظاهری شیک، کلاسیک و
+                زنانه بسازد. یکی از بهترین نمونه‌ها، لباس خال‌خالی سفید و مشکی است که در چندین مناسبت رسمی و نیمه‌رسمی
+                پوشیده و همیشه توانسته تعادل بی‌نقصی بین جذابیت و سادگی ایجاد کند.
+
+                طراحی‌های مدرن‌تر با خال‌خالی‌های کوچک و متوسط، به خوبی با استایل‌ کلاسیک او ترکیب شده و ظاهر او را تازه
+                و به‌روز نگه می‌دارد. همچنین، کیت اغلب خال‌خالی‌ها را با رنگ‌های خنثی و ساده ست می‌کند تا تمرکز روی
+                الگوی خال‌خالی بماند و استایل کلی بیش از حد شلوغ نشود. این انتخاب هوشمندانه باعث شده که لباس‌های
+                خال‌خالی او همواره در کانون توجه و تمجید قرار بگیرند.
+            </p>
+        </article>
+        <h2 style="display: flex; align-items: center ;justify-content: center;">استایل‌های خال‌خالی کیت میدلتون</h2>
+        <section class="gallery scroll-item">
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="../image/kit.png" alt="استایل 1">
+                    <p>ترکیب رنگ‌های خنثی با الگوهای ظریف</p>
+                </div>
+                <div class="gallery-card">
+                    <img src="../image/kate-middleton-wimbledon-white-bag-mulberry-amberley (1).jpg" alt="استایل 2">
+                    <p>استایل خال‌خالی زنانه و جذاب</p>
+                </div>
+                <div class="gallery-card">
+                    <img src="../image/کیت ۲.jpg" alt="استایل 3">
+                    <p>استایل کلاسیک و شیک با پیراهن سفید و مشکی</p>
+
+                </div>
+            </div>
+        </section>
+        <p>کیت میدلتون ثابت کرده که الگوی خال‌خالی می‌تواند در دنیای مد بسیار جذاب و چشم‌گیر باشد، به شرطی که با دقت و
+            سلیقه انتخاب و ست شود. انتخاب‌های موفق او نشان‌دهنده‌ی تسلطش بر مد و سبک شخصی است، اما مثل همه ما، گاهی
+            اشتباه هم پیش می‌آید که از آن‌ها هم می‌توان درس گرفت.</p>
+        <br>
+        <section class="news">
+            <h3>اخبار مرتبط</h3>
+
+            <div class="news-grid">
+                <div class="news-card scroll-item">
+                    <h4>استایل رسمی کیت در مراسم سلطنتی</h4>
+                    <p>نگاهی به انتخاب لباس‌های رسمی کیت میدلتون.</p>
+                </div>
+
+                <div class="news-card scroll-item">
+                    <h4>راز سادگی در استایل سلطنتی</h4>
+                    <p>چطور با لباس‌های ساده شیک باشیم؟</p>
+                </div>
+
+                <a href="../html/katemiddleton.html" class="card-link">
+                    <div class="news-card scroll-item">
+                        <h4>رنگ‌های محبوب کیت میدلتون</h4>
+                        <p>بررسی رنگ‌های پرکاربرد در استایل او.</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        const items = document.querySelectorAll('.scroll-item');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        items.forEach(item => observer.observe(item));
+    </script>
+
+</body>
+
+</html>
